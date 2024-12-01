@@ -1,4 +1,4 @@
-[![][file:livestream]][youtube-playlist]
+[![][file:cover]][youtube-playlist]
 
 # Advent of Code 2024 - Day 1: Historian Hysteria
 
@@ -44,5 +44,5 @@ The `main` function loads the input file, calls `part1` and `part2` to get the r
 
 **Overall, this solution is concise, efficient, and idiomatic, leveraging Kotlin's features to solve the problem elegantly.**
 
-[file:livestream]: .github/readme/livestream.png
+[file:cover]: .github/readme/cover.png
 [youtube-playlist]: https://www.youtube.com/playlist?list=PLlFc5cFwUnmwHaD3-qeoLHnho_PY2g9JX
