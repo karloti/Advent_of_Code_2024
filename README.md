@@ -1,8 +1,8 @@
-# Advent of Code 2023 - Day 1: Historian Hysteria
+# Advent of Code 2024 - Day 1: Historian Hysteria
 
 ## Problem Description
 
-[Advent of Code Day 1](https://adventofcode.com/2023/day/1) tasks us with reconciling two lists of location IDs held by Elvish Senior Historians. The lists are supposed to be the same, but they have discrepancies.
+[Advent of Code Day 1](https://adventofcode.com/2024/day/1) tasks us with reconciling two lists of location IDs held by Elvish Senior Historians. The lists are supposed to be the same, but they have discrepancies.
 
 **Part 1:** We need to calculate the total distance between the lists by pairing up the numbers (smallest to smallest, second smallest to second smallest, and so on) and summing the absolute differences between the pairs.
 
