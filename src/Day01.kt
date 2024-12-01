@@ -1,21 +1,44 @@
+import kotlin.math.absoluteValue
+
 fun main() {
-    fun part1(input: List<String>): Int {
-        return input.size
+    val s1 = mutableListOf<Int>()
+    val s2 = mutableListOf<Int>()
+
+    fun load(fileName: String) {
+        s1.clear()
+        s2.clear()
+        readInput(fileName).map { line ->
+            line.split(Regex("\\s+"))
+                .map(String::toInt)
+                .let { (e1, e2) -> s1.add(e1); s2.add(e2) }
+        }
     }
 
-    fun part2(input: List<String>): Int {
-        return input.size
+    load("Day01_test")
+
+    fun part1(): Int {
+        s1.sort()
+        s2.sort()
+        return (s1 zip s2).sumOf { (a, b) -> (a - b).absoluteValue }
     }
 
-    // Test if implementation meets criteria from the description, like:
-    check(part1(listOf("test_input")) == 1)
+    fun part2(): Int {
+        val map = s2.groupingBy { it }.eachCount()
+        return s1.sumOf { it * (map[it] ?: 0) }
+    }
 
-    // Or read a large test input from the `src/Day01_test.txt` file:
-    val testInput = readInput("Day01_test")
-    check(part1(testInput) == 1)
+    part1().let { result ->
+        println("result1 = $result")
+        check(result == 11) { "part1 Day01_test" }
+    }
 
-    // Read the input from the `src/Day01.txt` file.
-    val input = readInput("Day01")
-    part1(input).println()
-    part2(input).println()
+    part2().let { result ->
+        println("result2 = $result")
+        check(result == 31) { "part2 Day01_test" }
+    }
+
+    load("Day01")
+
+    part1().println()
+    part2().println()
 }
