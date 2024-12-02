@@ -16,9 +16,9 @@ fun main() {
         }
     }.run { if (sum().absoluteValue == size) 1 else 0 }
 
-    fun part1(): Int = report.sumBy { levels: List<Int> -> levels.checkSafe() }
+    fun part1(): Int = report.sumOf { levels: List<Int> -> levels.checkSafe() }
 
-    fun part2(): Int = report.sumBy { levels: List<Int> ->
+    fun part2(): Int = report.sumOf { levels: List<Int> ->
         levels.indices.asSequence().map { i ->
             levels.toMutableList().run {
                 removeAt(i)
